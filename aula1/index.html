@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+        <!--meu primeiro codigo-->
+    <!--HTML Éé uma tag.
+        Significado de sua sigla.
+        HyperText - São textos que aceitam links e audio visual.
+        Markup - Marcação feitas com tags
+        Languagem - é uma linguagem, porem, não de programação.
+    -->
+
+<html>
+
+    <head>
+        <!-- HEAD é Responsável por receber configurações da página-->
+        <!-- Também podemos adicionar o CSS dentro do HEAD com a teg Style-->
+        <!-- Como em HTML é tudo tag, podemos usas o celetor, 
+            lincando uma tag com o Stylo fazendo referencia com uma tag ou elemento-->
+        <!--Podemos trabalhar com pontos especificos na estilização se adicionarmos um elemento class-->
+        <!--Para chamar uma class, apenas digito .nomeDaClass-->
+        <!--Para chamar um id #nomeDoID-->
+        <!--Para estilizar o botão é necessario apenas digitar button-->
+        <meta charset="UTF-8">
+        <title>Hallo Word!</title>
+
+        <style>
+            /*
+            
+            CSS 
+            
+            */
+            body{
+                background: rgb(63, 141, 230);
+                color:seashell;
+                text-align: left;
+            }
+            
+            button{
+                border: none;
+                font-weight: bold;
+                background: #ff5e84;
+                color: white;
+            }
+
+            p{
+                text-align: left;
+                color: rgb(247, 244, 244);
+                font-family: 'Courier New', Courier, monospace
+            }
+            
+            /*ou poderia ser button.fat*/
+            .fat{
+                background: #ff5e84;
+                color: white;
+            }
+            /*chamando o id com a teg a*/
+            #footer a{
+                color: white;
+                border: none;
+                text-decoration: none;
+            }
+
+            .hide{
+                display: none;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <!--Posso colocar textos-->
+        <h1>Casa Criartiva</h1>
+        <!--Para adicionar uma imagem: o primeiro atributo html src é o local da imagem.
+            E alt é a sensibilidade da imagem, como se fosse uma legenda-->
+            <img src="Logo.png" alt="Imagem da Logomarca">
+
+            <p>
+                Fica em casa em perídos longos, não deve ser nada fácil.
+            </p>
+    
+            <p>
+                Por isso, iremos catalogar ideias,<strong> brincadeiras, jogos, filmes
+                livros, cursos, dicas</strong> de tudo que for necessário para tornar esse
+                momento mais interessante.
+            </p>
+    
+            <p>
+                Comece clicando em ver ideias para ver as 
+                ideias cadastradas e contribua adicionando a sua ideia.
+            </p>
+
+            <button>Adicionar Ideia</button>
+            <button class="fat">Ver Ideias</button>
+            <!--Para criar um link apenas digite a teg  "a"-->
+            <p id="footer">Meu<a href="https://www.facebook.com/cassio.luis.121"> Facebook</a></p>
+
+            <!--Começando com JavaScrip-->
+            <!--JS trabalha com objetos, elementos, funcionalidades e propriedades-->
+            <!--Acessando o HTML, como é tudo objeto, devera ser chamado com "document", pois, ele é um objeto-->
+            <!--Docuemnt. quando aparecer property significa que é uma propriedade e se tiver method significa que será uma funcionalidade-->
+            <script>
+                /*Chamando o botão*/
+                document
+                    .querySelector("button.fat")
+                    /*chama uma action no botão, tembém podendo add mais de um valor separado por virgula. Como criar uma função*/
+                    .addEventListener("click", function(){
+                        document
+                            .querySelector("#footer")
+                            /*classList é uma propriedade tendo um funcionalidade de toggle que significa "color e tirar" */
+                            .classList
+                            .toggle("hide")
+                    })
+            </script>            
+    </body>
+
+</html>
