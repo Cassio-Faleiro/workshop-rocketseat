@@ -17,99 +17,131 @@
         <!--Podemos trabalhar com pontos especificos na estilização se adicionarmos um elemento class-->
         <!--Para chamar uma class, apenas digito .nomeDaClass-->
         <!--Para chamar um id #nomeDoID-->
+        <!--Também não se pode ter IDs com a mesma nomenclatura-->
         <!--Para estilizar o botão é necessario apenas digitar button-->
         <meta charset="UTF-8">
         <title>Hallo Word!</title>
-
-        <style>
-            /*
-            
-            CSS 
-            
-            */
-            body{
-                background: rgb(63, 141, 230);
-                color:seashell;
-                text-align: left;
-            }
-            
-            button{
-                border: none;
-                font-weight: bold;
-                background: #ff5e84;
-                color: white;
-            }
-
-            p{
-                text-align: left;
-                color: rgb(247, 244, 244);
-                font-family: 'Courier New', Courier, monospace
-            }
-            
-            /*ou poderia ser button.fat*/
-            .fat{
-                background: #ff5e84;
-                color: white;
-            }
-            /*chamando o id com a teg a*/
-            #footer a{
-                color: white;
-                border: none;
-                text-decoration: none;
-            }
-
-            .hide{
-                display: none;
-            }
-
-        </style>
-
+        <!--A tag link serve para chamar o arquivo style.css-->
+        <link rel="stylesheet" href="style.css">
+        <!--O valor do href foi copiado do google fonts-->
+        <link href="<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,900&display=swap" rel="stylesheet">"
     </head>
 
     <body>
-        <!--Posso colocar textos-->
-        <h1>Casa Criartiva</h1>
-        <!--Para adicionar uma imagem: o primeiro atributo html src é o local da imagem.
-            E alt é a sensibilidade da imagem, como se fosse uma legenda-->
-            <img src="Logo.png" alt="Imagem da Logomarca">
 
-            <p>
-                Fica em casa em perídos longos, não deve ser nada fácil.
-            </p>
-    
-            <p>
-                Por isso, iremos catalogar ideias,<strong> brincadeiras, jogos, filmes
-                livros, cursos, dicas</strong> de tudo que for necessário para tornar esse
-                momento mais interessante.
-            </p>
-    
-            <p>
-                Comece clicando em ver ideias para ver as 
-                ideias cadastradas e contribua adicionando a sua ideia.
-            </p>
+        <!--A tag div, é utilizada como uma caixa, que engloba todas as outras
+        para chamar a div de modo automatico, bastas escrever div#container
+        essa fica pode ser usada para outras tags também, como para chamar a section#introducao-->
+        <div id="container">
 
-            <button>Adicionar Ideia</button>
-            <button class="fat">Ver Ideias</button>
-            <!--Para criar um link apenas digite a teg  "a"-->
-            <p id="footer">Meu<a href="https://www.facebook.com/cassio.luis.121"> Facebook</a></p>
+            <!--dentro da div, vai duas caixas ou seções, tag sections -->
+            <section id="introducao">
 
-            <!--Começando com JavaScrip-->
-            <!--JS trabalha com objetos, elementos, funcionalidades e propriedades-->
-            <!--Acessando o HTML, como é tudo objeto, devera ser chamado com "document", pois, ele é um objeto-->
-            <!--Docuemnt. quando aparecer property significa que é uma propriedade e se tiver method significa que será uma funcionalidade-->
-            <script>
-                /*Chamando o botão*/
-                document
-                    .querySelector("button.fat")
-                    /*chama uma action no botão, tembém podendo add mais de um valor separado por virgula. Como criar uma função*/
-                    .addEventListener("click", function(){
-                        document
-                            .querySelector("#footer")
-                            /*classList é uma propriedade tendo um funcionalidade de toggle que significa "color e tirar" */
-                            .classList
-                            .toggle("hide")
-                    })
-            </script>            
+                <!--Como cabeçalho uriliza a tag header-->
+                <header>
+                    <!--Para adicionar uma imagem: o primeiro atributo html src é o local da imagem.
+                    E alt é a sensibilidade da imagem, como se fosse uma legenda-->
+                    <img src="Logo.png" alt="Imagem da Logomarca">
+                </header>
+
+                <!--Para o conteudo principal deve ser utilizado a tag main-->
+                <main>
+                    <p>
+                        Fica em casa em perídos longos, não deve ser nada fácil.
+                    </p>
+            
+                    <p>
+                        Por isso, iremos catalogar ideias,<strong> brincadeiras, jogos, filmes
+                        livros, cursos, dicas</strong> de tudo que for necessário para tornar esse
+                        momento mais interessante.
+                    </p>
+            
+                    <p>
+                        Comece clicando em ver ideias para ver as 
+                        ideias cadastradas e contribua adicionando a sua ideia.
+                    </p>
+                </main>
+
+                <!--Para os botões pode ser usado a tag section novamente-->    
+                <section id="buttons">
+                    <button>Adicionar Ideia</button>
+                    <button class="fat">Ver Ideias</button>
+                </section>
+
+                <!--Para add um link na pagina web, bastar fazer uma tag footer-->
+                <footer>
+                    <!--Para criar um link apenas digite a teg  "a"-->
+                    <a href="https://www.facebook.com/cassio.luis.121">Meu Facebook</a>
+                </footer>
+
+
+                   
+            </section>
+
+            <section id="ultimas-ideias">
+                <!--sera repetido três vezes a tag div, e para isso deve ser utilizado com class
+                para automatizar, ao invez de usar # (que para id), deve ser o ponto, div.ideia-->
+                <div class="ideia">
+                    <img 
+                    src="https://image.flaticon.com/icons/svg/2729/2729036.svg" 
+                    alt="Imagem de Curso de Porgramação">
+
+                    <div class="conteiner">
+                        <h3>Curso de Programação</h3>
+                        <p>Estudo</p>
+                        <div class="descracao">
+                            <!--dica para gerar texto automatioco, basta digitar lorem-->
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus magni sit ab aspernatur 
+                            inventore dolores temporibus at maiores deleniti, nemo animi sint enim laudantium a veniam 
+                            rem quaerat mollitia nostrum.
+                        </div>
+                        <a href="#">Ir para Ideia</a>
+                    </div>
+                </div>
+
+                <div class="ideia">
+                    <img 
+                    src="https://image.flaticon.com/icons/svg/2729/2729069.svg" 
+                    alt="Imagem de Curso de Saúde">
+
+                    <div class="conteiner">
+                        <h3>Exercícios</h3>
+                        <p>Saúde</p>
+                        <div class="descracao">
+                            <!--dica para gerar texto automatioco, basta digitar lorem-->
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus magni sit ab aspernatur 
+                            inventore dolores temporibus at maiores deleniti, nemo animi sint enim laudantium a veniam 
+                            rem quaerat mollitia nostrum.
+                        </div>
+                        <a href="#">Ir para Ideia</a>
+                    </div>
+                </div>
+
+                <div class="ideia">
+                    <img 
+                    src="https://image.flaticon.com/icons/svg/2729/2729027.svg" 
+                    alt="Imagem de Curso de Meditação">
+
+                    <div class="conteiner">
+                        <h3>Meditação</h3>
+                        <p>Entalidade</p>
+                        <div class="descracao">
+                            <!--dica para gerar texto automatioco, basta digitar lorem-->
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus magni sit ab aspernatur 
+                            inventore dolores temporibus at maiores deleniti, nemo animi sint enim laudantium a veniam 
+                            rem quaerat mollitia nostrum.
+                        </div>
+                        <a href="#">Ir para Ideia</a>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+             
+        <!--Para fazer link com o JS, deve optar pelo script:src...
+            O atributo scr é o caminho do arquivo-->
+        <script src="scripts.js"></script>          
     </body>
 
 </html>
