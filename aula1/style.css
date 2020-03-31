@@ -1,0 +1,171 @@
+/*
+
+CSS 
+
+*/
+body{
+    background:rgb(95, 182, 240);
+    color:seashell;
+    /*aplicando a fonte que foi copiada do google fonts*/
+    font-family: 'Poppins', sans-serif;
+    /*O margin body ja vem com padrão uma margin de 8px, para tirar basta fazer conforme abaixo*/
+    margin: 0;
+}
+
+/*Estilizando o link com os elementos globais, 'hide' e 'a'*/
+.hide{
+    display: none;
+}
+
+a {
+    color: #ff5e84;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    /*Serve para suplinhar a palavra quando passar o amouse*/
+    text-decoration: underline;
+}
+
+
+
+/*Ajustando toda a div conteiner na tela*/
+#container {
+    /*PX é um elemento fixo, ou seja, independente do tamaho que tiver a janela, será sempre o px definido
+    assim, não irá se ajustar conforme a tela, utilizando 100% da pagina, para resolver isso, deve usar em porcentagem em 90%*/
+    width: 90%;
+    /*Largura maxima*/
+    max-width: 980px;
+    /*Espaçamento Margen. Se colocado o lado esquedo e direito em auto
+    a margen delimitada a cima será igual nos dois lados*/
+    /*margin-right: auto;
+    margin-left: auto;*/
+    /*Mas tambem pode ser agrupado*/
+    margin: 40px auto;
+    /*Dessa forma a parte superior e inferior serão 40px e os lados serão automaticos*/
+    /*----------------------------------------------------------------------------------*/
+    /*Posicionando as caixas na tela, com display*/
+    /*Dessa forma irá pegar todos os elementos filhos do container pai, que é a div conteiner*/
+    display: flex; 
+}
+
+/*Ajustando a section introducao*/
+#introducao{
+    width: 300px;
+    /*Para deixar uma distancia entra uma caixa e outra pode fixa uma margen*/
+    margin-right: 20px;
+}
+
+/*ajustando as margens do conteudo main. Mais é o conteudo principal*/
+main{ 
+    /*Também pode usar o margin agrupado, então os 4 lados seria 32px
+    para isso, basta digitar apenas margi: 32px;
+    se colocar dois valores ele ira pegar cima e laterais = margi: 32px 0;
+    */   
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+button{
+    background: #ff5e84;
+    border: none;
+    font-weight: bold;
+    color: white;
+    /*Mudando a forma do cursor quando posicionado em cima do botão*/
+    cursor: pointer;
+    /*arredondando as pontas do botão*/
+    border-radius: 6px;
+    /*Fazendo a sombra do botão*/
+    /*Sequência dos parametros, eixo y, eixo x, borrado da sombra, cor da sombra.*/
+    /*deve ser acresentado mais 2 caracter no fim da cor para definir a densidade da sombra*/
+    box-shadow: 0px 8px 16px #ff5e8432;
+}
+
+/*criando uma linha quando o cursor estiver em cima do botão*/
+/*hover é a ideia de mouse em cima*/
+button:hover{
+    /*caso em algum botão n queira a linha, é so add none ao invez de underline*/
+    text-decoration: underline;
+}
+
+p{
+    text-align: left;
+    color: rgb(247, 244, 244);
+    font-family: 'Courier New', Courier, monospace
+}
+
+/*ou poderia ser button.fat*/
+.fat{
+    background: #ff5e84;
+    color: white;
+    /*ajustando o tamanho do botão*/
+    width: 150px;
+    height: 40px;
+    /*arredondando as pontas do botão*/
+    border-radius: 6px;
+    /*Fazendo a sombra do botão*/
+    /*Sequência dos parametros, eixo y, eixo x, borrado da sombra, cor da sombra.*/
+    /*deve ser acresentado mais 2 caracter no fim da cor para definir a densidade da sombra*/
+    box-shadow: 0px 8px 16px #ff5e8432;
+}
+
+/*trabalhando com o button isolado, separado do footer*/
+#buttons{
+    display: flex;
+    /*so pode utilizar justify, quando se tem um display*/
+    /*O justify tem vario alinhamento, utilizando espaços em lugares diferentes*/
+    justify-content: space-evenly;
+    margin-bottom: 32px;
+}
+
+/*quando duas o mesmo parametro, por exemplo dois ID, podemos agrupalos usando virgula, mas tem que ser ajustes igual são, caso 
+precisasse fazer um ajuste apenas no button, teria que fazer separado.
+também deve ser na mesma ordem que estiver no HTML, pois, por ser castata, ira ler o primeiro*/
+/*chamando o id com a teg a*/
+#buttons, footer{
+    text-align: center;
+    color: white;
+    border: none;
+    /*distancia referente ao texto abaixo do button*/
+    /*margin-bottom: 32px;*/
+}
+
+/*Iniciando o lado direito da tela*/
+.ideia {
+    /*aliando o conteudo*/
+    display: flex;
+    background-color:rgb(252, 174, 85);
+    /*sombra da caixa*/
+    box-shadow: 0 4px 16px -8px #ff5e8432;
+    /*arredonda as pontas da caixa*/
+    border-radius: 8px;
+    /*Ajustando o preenchimento dentro da caixa*/
+    padding: 32px;
+    /*ajustando espaçamento entre uma imagem e outra*/
+    margin-bottom: 32px;
+}
+
+/*ajustando as imagens*/
+.ideia img{
+    width: 60px;
+    height: 60px;
+    /*espaçamento entre imagem e texto*/
+    margin-right: 32px;
+}
+
+/*tirando a margen padrão do navegador e assim aliando o testo com a imagem*/
+.ideia h3{
+    margin: 0;
+    font-style: italic;
+}
+
+/*ajustando o texto da teg 'p' das caixas*/
+.ideia p{
+    margin: 8px 0;
+}
+
+/*ajustando o texto da teg 'descricao' das caixas*/
+.ideia descricao{
+    margin: 16px 0;
+}
