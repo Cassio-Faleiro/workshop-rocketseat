@@ -19,6 +19,9 @@ body{
 
 a {
     color: #ff5e84;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -28,7 +31,17 @@ a:hover {
     text-decoration: underline;
 }
 
+/*Maneira de deixar algum texto mais opaco*/
+footer a {
+    opacity: 0.9;
+}
 
+/*Ajustando os paragrafos, p que esta no primeiro bloco e o id descricao*/
+p, .descricao{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
 
 /*Ajustando toda a div conteiner na tela*/
 #container {
@@ -70,7 +83,10 @@ main{
 button{
     background: #ff5e84;
     border: none;
+    font-size: 14px;
+    line-height: 18px;
     font-weight: bold;
+    letter-spacing: 0.2px;
     color: white;
     /*Mudando a forma do cursor quando posicionado em cima do botão*/
     cursor: pointer;
