@@ -89,7 +89,7 @@
                     <div class="conteiner">
                         <h3>Curso de Programação</h3>
                         <p>Estudo</p>
-                        <div class="descracao">
+                        <div class="descricao">
                             <!--dica para gerar texto automatioco, basta digitar lorem-->
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus magni sit ab aspernatur 
                             inventore dolores temporibus at maiores deleniti, nemo animi sint enim laudantium a veniam 
@@ -107,7 +107,7 @@
                     <div class="conteiner">
                         <h3>Exercícios</h3>
                         <p>Saúde</p>
-                        <div class="descracao">
+                        <div class="descricao">
                             <!--dica para gerar texto automatioco, basta digitar lorem-->
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus magni sit ab aspernatur 
                             inventore dolores temporibus at maiores deleniti, nemo animi sint enim laudantium a veniam 
@@ -138,7 +138,49 @@
             </section>
 
         </div>
-             
+        
+        <!--Estilo Modal-->
+        <!--Criando Formulário-->
+        <div id="modal">
+            <div class="conteudo">
+                <h1>Nova Ideia</h1>
+                <!--Para melhor trabalhar com o formulário no momento de estilizar, será criado uma div para cada form-->
+                <!--A action do form é o elemento que vai ser chamdo pelo backend-->
+                <form action="">
+                    <div class="input-wrapper">
+                        <!--A lebel é "legenda" para o imput-->
+                        <label for="title">Título da ideia</label>
+                        <!--O campo type vai definir o tipo que será o input, e o name é onde o backen vai chamar-->
+                        <input type="text" name="title">
+                    </div>
+                
+                    <div class="input-wrapper">
+                        <label for="categoty">Categoria</label>
+                        <input type="text" name="categoty">
+                    </div>
+
+                    <div class="input-wrapper"> 
+                        <label for="image">Link da imagem</label>
+                        <input type="url" name="image">
+                    </div>
+
+                    <div class="input-wrapper"> 
+                        <label for="description">Digite uma descrição para essa ideia</label>
+                        <textarea name="description" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="image">Link da ideia</label>
+                        <input type="url" name="link">
+                    </div>
+
+                    <button>Salvar</button>
+
+                </form>
+
+            </div>
+        </div>
+
         <!--Para fazer link com o JS, deve optar pelo script:src...
             O atributo scr é o caminho do arquivo-->
         <script src="scripts.js"></script>          
